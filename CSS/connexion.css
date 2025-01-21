@@ -66,14 +66,25 @@ button{
     width: 90%;
     margin-left: 5%;
 }
+.error-email {
+    font-size: 10px;
+    color: white;
+    background-color: red;
+    border-radius: 6px;
+    padding: 1%;
+    margin-top: 1%;
 
-#in_pwd, #in_pwdc, #in_mail{
+}
+#numTel{
+    display: none;
+}
+#in_pwd, #in_pwdc, #in_mail,#numTel{
     margin-top: 2%;
 }
 #in_pwdc, #in_name{
     display: none;
 }
-#in_pwd, #in_mail, #in_pwdc, #in_name{
+#in_pwd, #in_mail, #in_pwdc, #in_name,#numTel{
     height: 3em;
     border:  1px solid #c8e6c9;
     padding-left: 4%;
