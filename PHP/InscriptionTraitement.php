@@ -24,7 +24,7 @@ if (isset($_POST['nom']) && !empty($_POST['nom']) && isset($_POST['passwrd_confi
         $selection=$bdd->prepare("SELECT emailGuich FROM guichetier WHERE emailGuich=:email"); //on verifie ici si un  guichetier
         $selection->execute(array('email'=>$email));        //possede deja cet adresse email dans la base de donnees
         if($selection->rowCount()>0){
-            header('Location:connexion.php?erreur=emailExist');
+            header('Location:/index.php?erreur=emailExist');
         }
         else{         //insertion du guichetier
             $insertion=$bdd->prepare("INSERT INTO guichetier(nomGuich,telGuich,emailGuich,	passwrdGuich) VALUES(:nom,:tel,:email,:pass)");
@@ -60,11 +60,11 @@ else{
             $_SESSION['guichetier']=$guichetier; // creation d'une cession du guichetier
         }
         else{
-            header('Location:connexion.php?erreur=infos');
+            header('Location:../index.php?erreur=infos');
         }
     }
     else{
-        header('Location:connexion.php?erreur=infos');
+        header('Location:/index.php?erreur=infos');
     }
 }
 
